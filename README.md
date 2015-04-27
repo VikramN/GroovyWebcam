@@ -16,4 +16,16 @@ OpenCv http://opencv.org/ => 3-clause BSD License
 
 Groovy
 
-JavaCV (http://opencv.org/)
+JavaCV (https://github.com/bytedeco/javacv)
+
+## Example
+
+```Groovy
+
+    def _context = RecordingContext.WebcamRecordingContext(0)
+    _context.StartGrabber()
+    _context.ProfileDevice(1000)
+    _context.StartPreview(previewCanvas)
+    _context.StartRecording("out.mp4")
+    _context.StopRecording()
+```
